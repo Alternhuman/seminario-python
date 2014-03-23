@@ -1,0 +1,71 @@
+Fun fact: Name's based on Monty Python's Flying Circus
+[Chapter 1]
+Why do people use Python?
+	Software Quality: 
+		Readability, coherence. It sets apart from "kitchen sink" languages, like Perl. Readable, therefore maintainable. Deep support for OOP is a plus as well.
+		It seems to just "fit your brain": Everything is comprehensible with a few core concepts
+		Minimalist approach
+	Developer productivity: 
+		1/3, 1/5 to the size of a C/Java equivalent. Also it is not necessary to compile.
+		Internet-boom: difficult to find enough programmers to implement sw apps. Now, programming staffs are force to accomplish the same with few people. In both of those scenarios, Python allows to get more with less effort.
+		Deliberately optimize for speed of development.
+	Program portability:
+		Usually trivial
+		GUIs are usually portable as well
+	Support libraries:
+		Prebuilt functionality
+		Application-level programming tasks
+		Extended by 3rd parties or homemade software
+	Component integration:
+		Usable with C, C++, Java, COM, Corba, .NET, SOAM, XML-RPC
+	Enjoyment: "Pleasure than chore"
+
+Downside: It is not as fast as C/C++.
+	Nowadays it is optimized by translating to bytecode.
+	It is generally fast
+	When something like process a file or render a GUI, it is translated to C-compiled code, so it runs at C speed
+	When speed is needed, some crucial parts can be written in C and then linked
+	NumPy is an extension that combines ease-of-use with powerful computing
+Who uses Python?
+	500K/1M users
+	Google, Yahoo! use it in Internet services
+	HP, Seagate, IBM: Hw testing. Whole list at python.org
+What can be done with Python?
+	Basically anything "real"
+	Main:
+		System programming: Easy interfaces for OSs services: perfect for sysadmin, sh, searching files, directory trees, launch other programs, parallel processing.
+		It is POSIX! Works with ENVVARS, files, sockets, pipes, processes, multiple threads, regex, cmd args, std stream, filename expansions, shell.command launchers.
+	GUIs
+		It is simple
+		Comes with std OOP for GUIs, like Tk Tkinter (portable with native Look & Feel), PMW for widgets to Tinter, wxPython (based on C++)
+		PythonCard
+	Internet Scripting:
+		Networking tasks
+		Sockets, CGI, FTP, XML, parse, R/S mail, fetch webs, HTML, XML-RPC, SOAP, telnet remarkably simple
+		HTMLGen generates code
+		win32all -> Embed Python as JS
+		Zope, WebWare and Quixote -> Easy & fast dev of large websites
+	Component integration
+	Database Programming: pickle module
+	Rapid prototyping: Create a draft, then move to C/C+. Parts that do not require efficiency remain in Python
+	Numeric programming
+	Gaming, Images, AI, XML and More
+Python's technical strengths:
+	It's OO
+	It's free and supported
+	Community: Guido van Rossum: Benevolent Dictator For Life of Python (BDFL), also creator. Also +1000 fellows
+		Language changes folllow a formal enhancement process (PEP process) and be scrutinized by the BDFL. It makes it more conservative than other languages.
+	Portable.
+	Powerful:
+		Dynamic typing
+		Automatic memory mgmt
+		Programming-in-the-large support: Modules, classes and exceptions
+		Built-in object types: commonly used data structures
+		Built-in tools
+		Library utilities
+		3rd-party utilities
+	It's mixable
+	Easy to use&learn
+	Cleaner syntax
+	
+	
