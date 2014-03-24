@@ -68,4 +68,16 @@ Python's technical strengths:
 	Easy to use&learn
 	Cleaner syntax
 	
-	
+[Chapter 2: How Python runs programs]
+	Interpreter and support library at least
+	Compiled to byte code: lower level, platform-independent
+	.pyc is the result. With timestamps, it is only updated when necessary
+	PVirtual Machine interprets it
+	A few implementations: CPython: portable to ANSI C, Jython: Java classes that compile Python source code to Java byte code, routing it to the JVM (applets, GUI, etc), Python.NET
+	Python.NET->Integrated with C#
+	Psyco: JIT Python: Speeds up drammaticaly. Uses different data types at different times
+	Frozen binaries: Bundle everything (PVM, etc)
+[Chapter 3: How to run programs]
+	Interactive command-line
+	Works with pipes and output redirection
+	#!/usr/bin/env python
