@@ -81,3 +81,52 @@ Python's technical strengths:
 	Interactive command-line
 	Works with pipes and output redirection
 	#!/usr/bin/env python
+
+[Chapter 4: Numbers]
+	Built-in types are good
+	Numeric:
+		int
+		float
+		double
+		NEW: anything your computer can store, and complex numbers (plus operations with them)
+		Octal and hex are also trivial
+		Operators: Same as C (equal in precedence)
+			New: lambda args: expression -> Anonymous function
+					is -> Type of object
+					More at table 4-3 pg 58
+		Representation: Str and Repr display formats
+		oct(), hex() return values in such bases
+		Python is dynamically data-typed
+		Garbage collection
+[Chapter 5: Strings]
+	A kind of sequence (att. to that later)
+	It doesn't matter the kind of quoting marks
+	Literals: "spa'm", 'spa"m', '''...spam...''', "s\tp\na\0m"
+
+	Useful functions: len(), 
+	Scape chars:
+		\newline
+		\\
+		\'
+		\b, \f (formfeed)
+		\r (carriage return)
+		\N{} Unicode
+	Raw strings (supress escape characters)
+	""" characters code multiline block strings
+	Unicode strings encode larger character sets
+		u'spam'
+	Mixing strings is no problem. The concatenation is trivial and returns a Unicode string
+	str(), unicode() transform
+	Since strings are ordered collections of characters they can be accessed by indexing
+	S[-2]: The second from the end
+	New operator [:n] -> Extracts contiguous sections of a sequence:
+		S[1:3]->Characters 1 to 3 (not incluiding it)
+		S[:3]->Characters until 3
+		S[3:] -> Characters from 3
+		S[:-1]->Every character except the last item
+		S[:]->From 0 to the end (a top-level copy)
+		OPTIONAL THIRD INDEX: THE STEP:
+			X[1:10:2]->Fetches every other item in X from offsets 1-9, it will collect items from offsets 1,3,5 and so on.
+			"hello"[::-1] -> olleh
+		Example of usefulness: argv[1:] -> removes the name of the instance
+	Strings cannot be converted to numbers automatically
