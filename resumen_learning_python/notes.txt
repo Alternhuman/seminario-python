@@ -1,4 +1,5 @@
 Fun fact: Name's based on Monty Python's Flying Circus
+We need history
 [Chapter 1]
 Why do people use Python?
 	Software Quality: 
@@ -130,3 +131,52 @@ Python's technical strengths:
 			"hello"[::-1] -> olleh
 		Example of usefulness: argv[1:] -> removes the name of the instance
 	Strings cannot be converted to numbers automatically
+	Strings are immutable->To change a string you have to make a new one
+	S = S[:4] + 'Burger' + S[-1]
+	Formatting: 'That value is $d' % ('999') IT IS LIKE C!
+	Also concatenation: "The knights who say %s" % variable_with_string_inside
+	Advanced string formatting @ pg 88
+	String methods @ pg 91
+
+
+OBJECTS	
+	Three main categories, with operations associated to them: Numbers (addition, manipulation), Sequences (indexing, slicing, concatenation), Mapping (indexing by key)
+	Mutable types can be changed in-place. Non-mutable guarantee integrity
+
+Lists and dictionaries:
+	Lists are Python's most flexible ordered colllection object type. They can contain any sort of object (even other lists)
+	They do most of the dirty job that the programmer had to do in ~C
+		Ordered collections of arbitrary objects->Left-to-right positional order
+		Accessed by offset
+		Variable length, heterogeneous, arbitrarily nestable
+		Of the category mutable sequence->Lists can be both changed in place and respond to all the sequene operations used with strings
+		Arrays of object references: They contain >=0 references to other objects. Fetching an item is as fast as in C (they are really C arrays inside the interprter). It is always a reference, not a copy (unless explicit)
+		Examples @ pg 98
+			L1 = [ ] 
+			L3 = ['abc', ['def', 'ghi']]
+			L3.append('jklm')
+		Lists in action: 
+			Basic operations: len(). ['Patata'] * 4 = ['Patata', 'Patata', 'Patata', 'Patata']
+			for x in [1, 2, 3]: print x
+			[1, 2] + list("34") -> Important: operators without same operand type will raise an error
+			Lists are mutable: changing lists in-place
+				.sort(), .extend()
+			Dictionaries: The mosts flexile built-in data type in Python. Dictionaries are unordered colections, their chief distinction is that items are stored and fetched in dictionaries by key, instead of positional offset. They replace many of the searching algorithms and data structures you might have to implement manually in low-level
+				They belong to the category mutable mapping
+				Accessed by key, not offsets
+				Unordered collections of arbitrary objects. They aren't kept in a particular order. Fun fact: Python randomizes th order in order to provide a quick lookup. Keys are symolic locations of items in a dictionary.
+				Variable lenguth, heterogeneous, arbitrarily nestable
+				tables of object references (hash tables)
+				Dictionaries in action:
+					{key:value}
+					D={'spam':1, 'eggs':2}
+					.copy, keys, has_key(), values(), get(key, default), update, dict() (Construction)
+					Accessed like arrays-> d2['spam']
+					Change dictionaries in-place. As easy as an assignment
+					d2.update(d3)->Concatenate
+					Notes: Sequence operations don't work
+						Assigning to new indexes add entries
+						Keys need not always be strings
+					Since every item of an array must be used, dictionaries can be used to simulate a flexible list
+					They usually replace data structures
+[Chapter 7: Tuples, files, and everything else]
