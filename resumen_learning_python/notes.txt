@@ -180,3 +180,18 @@ Lists and dictionaries:
 					Since every item of an array must be used, dictionaries can be used to simulate a flexible list
 					They usually replace data structures
 [Chapter 7: Tuples, files, and everything else]
+	Tuple: basically like a list, but immutable. They are ordered collections, accessed by offset, are sequences, have a fixed length, heterogeneous, arbitrarily nestable and arrays of nestable objects
+		t1=(0,1,2,3, 'AA');
+		t1[3];
+		for x in t1
+		3 in t1
+
+		Operations: +, *, indexing, slicing
+		They do not provide operations, it is necessary to convert them to arrays before (.list())
+		Why lists and tules? Integrity
+
+		Files:
+			open() -> Like C
+			.read(/N), .readline
+			.write(/N), .writeline
+			.close()
