@@ -315,7 +315,7 @@ Ejemplos de literales \verb+string+:
 \end{itemize}
 
 \subsection{Manipulación de cadenas}
-\Large Operadores
+{\Large Operadores}
 \begin{itemize}
 	\item Concatenación: \verb|+|
 	\item Repetición: \verb+*+
@@ -326,7 +326,7 @@ Ejemplos de literales \verb+string+:
 	\item Longitud: \verb+len()+
 \end{itemize}
 
-\Large Métodos
+{\Large Métodos}
 \begin{itemize}
 %%Completar
 	\item \verb+cadena.capitalize()+
@@ -433,7 +433,7 @@ elif milk
 else:
 	buy(0);
 \end{lstlisting}
-\Large \textbf{Importante: no existe la sentencia} \verb+switch+
+{\Large \textbf{Importante: no existe la sentencia} \verb+switch+}
 Esta característica, que a muchos procedentes de lenguajes como Pascal o C no gustará, es fácilmente reemplazable por un diccionario:
 \begin{lstlisting}[frame=single, showspaces=false]
 elegir='jamon';
@@ -471,11 +471,52 @@ while x :
 else:
 	print 'Error'
 \end{lstlisting}
-\Large for:
+{\Large for:}
 \begin{lstlisting}[frame=single, showspaces=false]
 for x in [1,2,3]:
 	print x
 \end{lstlisting}
+
+\section{Funciones}
+Una función nos permite agrupar bloques de código a fin de separar componentes, reutilizarlos o invocarlos en varias ocasiones a lo largo del código. En Python contamos con las siguientes expresiones:
+\begin{itemize}
+	\item Llamadas: \verb+func("arg1", "arg")+
+	\item Definición y retorno de elementos: \verb|def funcion(a, b): return a+b|
+	\item Global: \verb+def funcion(): global x; x = 'nuevo'+
+	\item Funciones lambda: \verb+funcs = [lambda x: x**2, lambda x: x*3]+
+\end{itemize}
+
+Para crear una función contamos con la sentencia \verb+def+. Esta sentencia no se ejecuta hasta que se alcanza en el flujo del programa, por lo que es completamente válido incluirla en cualquier punto del programa. Además, def genera un objeto que tiene un nombre asignado. Se convierte por tanto en una referencia a un objeto función. El operador \verb+return+ finaliza el flujo de la función y devuelve un objeto a quien invocó la función. Los argumentos son pasados como referencias. \verb+global+ declara variables a nivel de módulo que son asignadas. Por defecto, todos los nombres asignados en una función son locales a la misma y existen únicamente cuando la función se ejecuta. Utilizando \verb+global+ se permite ampliar el alcance del nombre definido.
+Una función no se declara con un tipo de datos determinado, los argumentos, valores de retorno y variables pueden ser de cualquier tipo, lo cual aumenta la versatilidad de estos bloques de código.
+También existen funciones anónimas con el operador \verb+lambda+.
+
+\section{Módulos}
+Los módulos de Python son piezas de código que permiten añadir herramientas a nuevos programas. A grandes rasgos constituyen paquetes de nombres, que son cargados o no en memoria según la funcionalidad que se desee aprovechar de los mismos, pudiendo seleccionar dentro de cada módulo qué componentes cargar.
+Utilizar módulos es muy recomendable debido a que fomentan la reusabilidad del código, particionan el espacio de nombres e implementan servicios compartidos o datos (es posible que un sistema con distintas entidades que accedan a un conjunto común de datos cuente con una única copia de esta información gracias al uso de módulos).
+Con la sentencia \verb+import+ añadimos un módulo al programa.
+Python ya cuenta con un set de unos 200 módulos incluidos con la distribución general del lenguaje, que cubren las tareas más cotidianas.
+\subsection{Creación de módulos}
+Para definir un módulo se debe crear un código en Python, e importarlo a otro con las sentencias \verb+import+ o \verb+from+. Todo elemento en el nivel jerárquico superior es incluido a la lista de nombres del módulo y será accesible cuando se utilice el módulo. La diferencia entre ellos es que \verb+from+ permite seleccionar qué elementos importar, haciendo además que no sea necesario incluir el nombre del módulo cada vez que se desee utilizar un nombre.
+
+\section{Clases, objetos y excepciones}
+Como ya hemos dicho en numerosas ocasiones, Python es un lenguaje orientado a objetos. Una clase constituye una `plantilla' a partir de la cual crear una serie de objetos. Es importante tener en mente que la utilización de objetos en Python es completamente opcional, sin embargo es altamente recomendable utilizarlas, debido al potencial de este paradigma en el ámbito de la reutilización y aislamiento de código, la herencia y composición y la instanciación múltiple.
+\subsection{Un ejemplo inicial}
+\begin{lstlisting}[frame=single, showspaces=false]
+class Perro:
+	def Ladrar():
+		print "Arrf"
+	def Correr():
+		print "Corriendo"
+\end{lstlisting}
+Para generar instanciaciones de estas clases utilizamos el nombre de la misma:
+\begin{lstlisting}[frame=single, showspaces=false]
+toby = Perro()
+\end{lstlisting}
+
+\subsection{Observaciones generales}
+La orientación a objetos en Python contiene composición, herencia y interpretación de los operandos del lenguaje.
+\subsection{Excepciones}
+Las excepciones son mecanismos de control de situaciones irregulares dentro del flujo de un programa. Consisten en bloque de código rodeados por las palabras \verb+try+/\verb+except+ para capturar excepciones lanzadas por el lenguaje o por el usuario, \verb+try+/\verb+finally+ para operaciones finales tanto si se dan excepciones como si no, \verb+raise+ para lanzar excepciones manualmente en el código del usuario y \verb+assert+ como \textit{trigger} condicional para una excepción en el código del usuario del lenguaje. Generalmente son utilizadas para gestión de errores, notificaciones de eventos, manejo de situaciones especiales o acciones de finalización.
 %\lipsum[12-13]
 
 %%Documentation pg 171-Chapter 11
