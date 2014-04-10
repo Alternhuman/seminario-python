@@ -357,10 +357,128 @@ Se puede utilizar cualquier especificados de formato de C en Python, así como a
 Una cadena no se convierte automáticamente a número o a cualquier otro tipo de datos, es necesario hacerlo explícitamente.
 
 \section{Listas y diccionarios}
-Existen tres categorías generales en Python: números, secuencias y mapas. Cada una de ellas tiene unas propiedades especiales y operaciones asociadas a él. Hasta ahora hemos visto las dos primeras (números y secuencias, dado que las cadenas de caracteres son un tipo de estas). La categoría restante, los mapas
+Existen tres categorías generales en Python: números, secuencias y mapas. Cada una de ellas tiene unas propiedades especiales y operaciones asociadas a él. Hasta ahora hemos visto las dos primeras (números y secuencias, dado que las cadenas de caracteres son un tipo de estas). La categoría restante, los mapas.
 
+Las listas son la colección de elementos ordenada más flexible de Python. Pueden contener cualquier elemento, dado que son meramente colecciones de referencias, y permiten anidar más listas dentro de ellas.
+Una ventaja de Python es que la mayoría de las operaciones que en otros lenguajes deben ser implementadas por el programador se encuentran disponibles de serie en el lenguaje.
+Las propiedades de estas soluciones son:
+\begin{itemize}
+	\item Son mutables, de longitud variable y orden definido.
+	\item Se accede por índices.
+	\item colecciones de referencias. Obtener un elemento es tan rápido como en C (de hecho son arrays de C dentro del intérprete). Mientras que no se especifique explícitamente, los elementos son referencias y no copias.
+\end{itemize}
+Ejemplos de listas:
+\begin{lstlisting}[frame=single, showspaces=false]
+#!/usr/bin/env python
+L1 = [];
+L2 = ['abc', 'is', 'as', 'easy', 'as'];
+L2.append('123');
+\end{lstlisting}
+Operaciones con listas:
+\begin{itemize}
+	\item Operaciones básicas: len(), \verb+['Monty'] *4+ (multiplicación).
+	\item \verb+for x in [1,2,3]: print x+
+	\item \verb#[1,2] + list("34")# \footnote{Importante, utilizar operadores con distintos tipos de operados generará un error.}.
+	\item Modificación: \verb+.sort(), .extend()+
+\end{itemize}
+\subsection{Diccionarios}
+Los diccionarios son el tipo más flexible que viene integrado en Python. Son colecciones sin orden de elementos, cuya distinción respecto las listas es que los elementos son de tipo valor-clave. Pertenecen a la categoría de mapas mutables, y se accede a ellos mediante una clave. No tienen un orden particular\footnote{De hecho, Python ordena aleatoriamente los elementos para conseguir un acceso más rápido}. Las claves son localizaciones simbólicas de ítems en un diccionario.
+Son colecciones de longitud variable, heterogéneas y arbitrariamente anidables.
+La sintaxis de sus elementos es \verb+{clave:valor}+. Ejemplos de diccionarios:
+\begin{itemize}
+	\item D={'spam':1, 'eggs':2};
+	\item Operaciones: \verb+.copy(), .keys(), .has_key(), .values(), .get(clave, defecto)+
+	\item Acceso a elementos: tal y como en un array: \verb+D['spam']+
+	\item Concatenación: \verb+D.update(d1)+
+\end{itemize}
+Son muy utilizados como estructuras de datos para una multitud de casos.
+
+\section{Tuplas, archivos y otras estructuras de datos}
+Las tupas son colecciones equivalentes a las listas, pero de carácter inmutable. Declarar una tupla es muy parecido a la creación de listas:
+\begin{lstlisting}[frame=single, showspaces=false]
+#!/usr/bin/env python
+() 
+t0 = (0,);
+t1 = (0, 'Ni', 1.2, 3);
+\end{lstlisting}
+\subsection{¿Para qué sirve tener tipos inmutables y mutables}
+La principal ventaja de contar con ambos tipos es la flexibilidad de unos y las ventajas que proporciona contar con la garantía de que un elemento no se va a poder modificar.
+\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
+  \begin{center}
+    \includegraphics[width=\textwidth]{tree.png}
+  \end{center}
+  \caption{Jerarquía de tipos predefinidos de Python.}
+\end{wrapfigure}
+\subsection{Índices. Las mejoras de Python}
+Como hemos comentado a lo largo de este documento, Python incorpora mejoras al acceso a elementos en listas, tuplas y otro tipo de colecciones. Estos son nuevos operandos:
+\begin{itemize}
+	\item \verb+array[1:]+ : Retorna una lista con los elementos desde el 1.
+	\item \verb+array[:4]+ : Retorna una lista con los elementos hasta el 4.
+	\item \verb+array[1:3+ :Lista con los elementos desde 1 a 3 (no inclusive)
+	\item \verb+array[-1]+ : Último elemento
+	\item \verb+array[:]+ : Todos los elementos del array
+\end{itemize}
+\subsection{Ficheros}
+Para trabajar con un fichero es necesario almacenar en una variable un \textit{descriptor} del mismo. Existen las funcionen \verb+open()+, \verb+read()+ o \verb+write()+ para manipular archivos de forma sencilla, así como métodos más específicos, como \verb+readline()+
+
+
+\section{Condicionales}
+Un programa generalmente está compuesto por secuencias de control de flujo y repetición. En Python la primera categoría está protagonizada por la cláusula \verb+if+.
+Ejemplo de una estructura condicional en Python:
+\begin{lstlisting}[frame=single, showspaces=false]
+if eggs:
+	buy(1);
+elif milk
+	buy(6);
+else:
+	buy(0);
+\end{lstlisting}
+\Large \textbf{Importante: no existe la sentencia} \verb+switch+
+Esta característica, que a muchos procedentes de lenguajes como Pascal o C no gustará, es fácilmente reemplazable por un diccionario:
+\begin{lstlisting}[frame=single, showspaces=false]
+elegir='jamon';
+print{'leche': 1.25,
+	'jamon':1.99,
+	'huevos':0.99,
+	'bacon':1.10}[elegir]
+\end{lstlisting}
+\subsection{Reglas de sintaxis}
+\begin{itemize}
+	\item Las sentencias se ejecutan una tras otra, a menos que se especifique lo contrario.
+	\item Las sentencias y los bloques son detectados automáticamente: no se utilizan corchetes o cualquier otro tipo de delimitador. El indentado del código es lo que determina la pertenencia o no a un bloque.
+	\item Líneas en blanco, espacios y comentarios son generalmente ignorados: especialmente en archivos. A la hora de trabajar con cadenas de caracteres se respetan. Los comentarios (marcados por un `\#' inicial) siempre son ignorados.
+\end{itemize}
+
+\section{Bucles}
+While:
+\begin{lstlisting}[frame=single, showspaces=false]
+while x :
+	print x,
+	x = x[1:];
+\end{lstlisting}
+Herramientas de control: \verb+break+, \verb+continue+, \verb+pass+ y \verb+else+:
+\verb+break+ y \verb+continue+ funcionan de la misma forma que en C, interrumpiendo el flujo del bucle más anidado e interrumpiendo la iteración que se da en ese momento para pasar a la siguiente respectivamente.
+\verb+pass+ no hace nada. Es de utilidad cuando el lenguaje obliga al programador a incluir una sentencia en un bloque.
+\verb+else+: Se ejecuta si y sólo si el bucle finaliza de forma normal (sin encontrarse con un \verb+break+).
+Formato general de un bucle:
+%%Revisar
+\begin{lstlisting}[frame=single, showspaces=false]
+while x :
+	if x / 2 > 5:
+		x=x+3
+		break
+	x--
+else:
+	print 'Error'
+\end{lstlisting}
+\Large for:
+\begin{lstlisting}[frame=single, showspaces=false]
+for x in [1,2,3]:
+	print x
+\end{lstlisting}
 %\lipsum[12-13]
 
+%%Documentation pg 171-Chapter 11
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------

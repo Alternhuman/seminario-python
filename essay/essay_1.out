@@ -13,3 +13,11 @@
 \BOOKMARK [2][-]{subsection.3.3}{Formateo avanzado de cadenas}{section.3}% 13
 \BOOKMARK [2][-]{subsection.3.4}{Consideraciones especiales}{section.3}% 14
 \BOOKMARK [1][-]{section.4}{Listas y diccionarios}{}% 15
+\BOOKMARK [2][-]{subsection.4.1}{Diccionarios}{section.4}% 16
+\BOOKMARK [1][-]{section.5}{Tuplas, archivos y otras estructuras de datos}{}% 17
+\BOOKMARK [2][-]{subsection.5.1}{\277Para qu\351 sirve tener tipos inmutables y mutables}{section.5}% 18
+\BOOKMARK [2][-]{subsection.5.2}{\315ndices. Las mejoras de Python}{section.5}% 19
+\BOOKMARK [2][-]{subsection.5.3}{Ficheros}{section.5}% 20
+\BOOKMARK [1][-]{section.6}{Condicionales}{}% 21
+\BOOKMARK [2][-]{subsection.6.1}{Reglas de sintaxis}{section.6}% 22
+\BOOKMARK [1][-]{section.7}{Bucles}{}% 23
