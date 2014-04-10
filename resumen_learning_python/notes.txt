@@ -195,3 +195,48 @@ Lists and dictionaries:
 			.read(/N), .readline
 			.write(/N), .writeline
 			.close()
+	Summary: Lists, dictionaries and tuples can hold any kind of object
+		List, dictionaries and tuples can be arbitrarily nested
+		Lists and dictionaries can dynamically grow and shrink
+
+		Reference vs. Copies: Be aware of the consequences of both
+			.copy()
+	All objects respond to comparisons: test for equality, relatie magnitude, et. They inspect all parts of compound objects until a result can be determined
+	== determines value equivalence
+	is operator test object identity
+	Booleans exist since 2.3
+	Empty, 0, len(0), 0.0, "", [], {} return false
+
+	Python's type hierarchies. Image pg 124
+	Other types: Linked-in C extensions or Python classes, regex, DBM files, GUI widgets...
+	References: in case a loop is detected, [...] is inserted
+[Part III: Statements and syntax]
+	Familiar and simple syntax
+[Chapter 8: Assignment, expressions and print]
+	Pograms are coposed of modules
+	Modules contain statements
+	Statements contain expressions
+	Expressions create and process objects
+	Statements pg 134, similar to C, C++
+	Implicit assignments: import, from, def, class, for, function arguments
+	Variable name rules: just like C
+	IMPORTANT: names have no type, but objects do
+	Expressions: just like C, but
+		spam < ham < eggs == spam < ham and ham < eggs
+	Print, just like C
+		sys.stdout = <Descriptor>
+
+[Chapter 9: if test]
+	There is no switch. Alternative, dictionary:
+	choice = 'ham'
+	print{'spam': 1.25, 'ham': 1.99}[choice]
+Block delimiters:
+	Python works just like that, it needs indentation to determine the scope
+
+[Chapter 10: while and for]	
+	while:
+		while <test>
+			<>
+		else:
+			<> # Run if didn't exit loop with break
+		
