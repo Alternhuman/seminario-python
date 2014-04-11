@@ -104,6 +104,8 @@ Universidad de Salamanca \\ % Your institution for the title page
 
 \begin{document}
 
+
+
 \begin{frame}
 \titlepage % Print the title page as the first slide
 \end{frame}
@@ -290,11 +292,12 @@ Cualquier operación soportada en C, en adición a nuevas como la suma con trunc
 \column{.45\textwidth}
 En Python son un tipo de secuencia. El lenguaje cuenta con un potente conjunto de utilidades para la manipulación de cadenas. Son elementos inmutables por lo que una vez creados no se pueden modificar. Trabaja con varios tipos de codificación de caracteres.
 
-%\lstset{language=python, showspaces=false}
+\lstset{language=python, showspaces=false}
 %\begin{lstlisting}[frame=single, showspaces=false]
 %%#!/usr/bin/env python
 %print
 %\end{lstlisting}
+
 \column{.45\textwidth}
 \begin{itemize}
 \item Búsqueda por índices: cadena[i]
@@ -325,13 +328,15 @@ Destacan las listas y los diccionarios.
 \begin{frame}
 \frametitle{Listas}
 Una lista es una colección de elementos ordenados muy flexible. No importa el tipo de objeto que almacenen (son colecciones de referencias), e implementan muchas de las operaciones que en otros lenguajes son responsabilidad del programador.\\
-Son mutables, de longitud variable y orden definido.
+Son mutables, de longitud variable y orden definido.\\
 Ejemplos de listas:
 %\begin{lstlisting}[frame=single, showspaces=false]
 %#!/usr/bin/env python
-%L1 = [];
-%L2 = ['abc', 'is', 'as', 'easy', 'as'];
-%L2.append('123');
+\begin{itemize}
+\item L1 = [];
+\item L2 = ['abc', 'is', 'as', 'easy', 'as'];
+\item L2.append('123');
+\end{itemize}
 %\end{lstlisting}
 \end{frame}
 
@@ -374,7 +379,8 @@ La principal ventaja de contar con ambos tipos de elementos es la flexibilidad d
 
 \section{Funciones}
 \begin{frame}
-Toda función en Python genera una referencia que se almacena en un nombre. Ejemplos:
+Toda función en Python genera una referencia que se almacena en un nombre. Ejemplo:\\
+\textbf{def correr(): global velocidad; print "Estoy corriendo a \%d metros/segundo" \% velocidad}
 \end{frame}
 
 \section{Módulos}
@@ -393,6 +399,12 @@ Al ser un lenguaje multiparadigma, la utilización de objetos o no es una decisi
 \begin{frame}
 \frametitle{Ejemplo de una clase}
 %%Do
+\textbf{class Perro:\\
+          def Ladrar():\\
+		print `Arrf!'\\
+	def Correr():\\
+		print `Estoy corriendo'\\
+	}	
 \end{frame}
 
 \section{Excepciones}
@@ -407,7 +419,19 @@ Demo time!
 
 \begin{frame}
 \frametitle{Impacto en el mundo del desarrollo de software.}
-%%XKCD here
+\includegraphics[width=0.9\linewidth]{python_1.png}
+\end{frame}
+
+\begin{frame}
+\frametitle{Impacto en el mundo del desarrollo de software.}
+\includegraphics[width=0.9\linewidth]{python_2.png}
+\end{frame}
+
+\begin{frame}
+\frametitle{Impacto en el mundo del desarrollo de software.}
+\begin{center}
+\includegraphics[height=0.75\textheight]{new_pet_cropped.png}
+\end{center}
 \end{frame}
 
 \begin{frame}

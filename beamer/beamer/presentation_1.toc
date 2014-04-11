@@ -17,4 +17,3 @@
 \beamer@sectionintoc {5}{M\IeC {\'o}dulos}{24}{0}{5}
 \beamer@sectionintoc {6}{Orientaci\IeC {\'o}n a objetos}{25}{0}{6}
 \beamer@sectionintoc {7}{Excepciones}{27}{0}{7}
-\beamer@sectionintoc {8}{Second Section}{28}{0}{8}

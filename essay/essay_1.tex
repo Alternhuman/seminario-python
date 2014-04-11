@@ -118,7 +118,7 @@ Dr. Vivian \textsc{López} % Supervisor's Name
 
 \section{Introducción} % Major section
 
-\subsection{\large ¿Por qué usar Python?}
+\subsection{¿Por qué usar Python?}
 	Para aquel que no aún no conozca las virtudes de este lenguaje, y qué ventajas proporciona para sus labores como programador, puede que al principio se muestre reacio a adoptar esta tecnología. Sin embargo, puede que estos principios de desarrollo hagan cambiar de opinión hasta al más acérrimo a otros lenguajes.
 	\begin{itemize}
 		\item Python es legible y coherente.\\
@@ -401,15 +401,21 @@ Las tupas son colecciones equivalentes a las listas, pero de carácter inmutable
 t0 = (0,);
 t1 = (0, 'Ni', 1.2, 3);
 \end{lstlisting}
+\newpage
 \subsection{¿Para qué sirve tener tipos inmutables y mutables?}
 La principal ventaja de contar con ambos tipos es la flexibilidad de unos y las ventajas que proporciona contar con la garantía de que un elemento no se va a poder modificar.
-\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
-  \begin{center}
-  %%Corregir
-    \includegraphics[width=0.7\textwidth]{tree.png}
-  \end{center}
-  \caption{Jerarquía de tipos predefinidos de Python.}
-\end{wrapfigure}
+%\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
+%  \begin{center}
+%  %%Corregir
+%    \includegraphics[width=0.7\textwidth]{tree.png}
+%  \end{center}
+%  \caption{Jerarquía de tipos predefinidos de Python.}
+%\end{wrapfigure}
+%\newpage
+\begin{center}
+	\includegraphics[width=0.7\textwidth]{tree.png}
+\end{center}
+
 \subsection{Índices. Las mejoras de Python}
 Como hemos comentado a lo largo de este documento, Python incorpora mejoras al acceso a elementos en listas, tuplas y otro tipo de colecciones. Estos son nuevos operandos:
 \begin{itemize}
@@ -434,7 +440,7 @@ elif milk
 else:
 	buy(0);
 \end{lstlisting}
-{\Large \textbf{Importante: no existe la sentencia} \verb+switch+}
+{\textbf{Importante: no existe la sentencia} \verb+switch+.}\\
 Esta característica, que a muchos procedentes de lenguajes como Pascal o C no gustará, es fácilmente reemplazable por un diccionario:
 \begin{lstlisting}[frame=single, showspaces=false]
 elegir='jamon';
@@ -477,7 +483,7 @@ else:
 for x in [1,2,3]:
 	print x
 \end{lstlisting}
-
+\newpage
 \section{Funciones}
 Una función nos permite agrupar bloques de código a fin de separar componentes, reutilizarlos o invocarlos en varias ocasiones a lo largo del código. En Python contamos con las siguientes expresiones:
 \begin{itemize}
@@ -528,11 +534,12 @@ Las excepciones son mecanismos de control de situaciones irregulares dentro del 
 %%Use
 \begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
 
-\bibitem[The Zen of Python, 2004]{Peters:2004dg}
-Figueredo, A.~J. and Wolf, P. S.~A. (2009).
-\newblock Assortative pairing and life history strategy - a cross-cultural
-  study.
-\newblock {\em Human Nature}, 20:317--330.
+\bibitem[Learning Python, 2003]{Luzt, Ascher:2004dg}
+%Figueredo, A.~J. and Wolf, P. S.~A. (2009).
+Luzt, Mark y Ascher David (2003)
+%\newblock Assortative pairing and life history strategy - a cross-cultural
+%  study.
+%\newblock {\em Human Nature}, 20:317--330.
  
 \end{thebibliography}
 
