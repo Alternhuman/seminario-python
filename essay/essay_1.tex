@@ -147,9 +147,9 @@ Generalmente es un lenguaje rápido, y cuando es necesario optimizar el rendimie
 
 \subsection{¿Quién usa Python?} % Sub-section
 
-Con una comunidad de entre 500,000 y un millón de usuarios, Python cuenta con una comunidad alrededor muy grande. Compañías como Google o Yahoo! utilizan el lenguaje en sus servicios en red, y para HP, Seagate o IBM es una herramienta de utilidad a la hora de realizar pruebas de hardware\footnote{La lista completa se puede encontrar en \href{http://www.python.org}{python.org}}
+Con un número de usuarios entre 500,000 y un millón de usuarios, Python cuenta con una comunidad muy grande. Compañías como Google o Yahoo! utilizan el lenguaje en sus servicios en red, y para HP, Seagate o IBM es una herramienta de utilidad a la hora de realizar pruebas de hardware\footnote{La lista completa se puede encontrar en \href{http://www.python.org}{python.org}}
 Proyectos como el microordenador Raspberry Pi promocionan y utilizan Python como lenguaje principal de programación a la hora de enseñar a nuevos programadores y al utilizar el dispositivo.
-
+%%Raspberry
 %%------------------------------------------------
 %
 %\subsubsection{Subsubsection 1} % Sub-sub-section
@@ -365,7 +365,7 @@ Las propiedades de estas soluciones son:
 \begin{itemize}
 	\item Son mutables, de longitud variable y orden definido.
 	\item Se accede por índices.
-	\item colecciones de referencias. Obtener un elemento es tan rápido como en C (de hecho son arrays de C dentro del intérprete). Mientras que no se especifique explícitamente, los elementos son referencias y no copias.
+	\item Colecciones de referencias. Obtener un elemento es tan rápido como en C (de hecho son arrays de C dentro del intérprete). Mientras que no se especifique explícitamente, los elementos son referencias y no copias.
 \end{itemize}
 Ejemplos de listas:
 \begin{lstlisting}[frame=single, showspaces=false]
@@ -401,11 +401,12 @@ Las tupas son colecciones equivalentes a las listas, pero de carácter inmutable
 t0 = (0,);
 t1 = (0, 'Ni', 1.2, 3);
 \end{lstlisting}
-\subsection{¿Para qué sirve tener tipos inmutables y mutables}
+\subsection{¿Para qué sirve tener tipos inmutables y mutables?}
 La principal ventaja de contar con ambos tipos es la flexibilidad de unos y las ventajas que proporciona contar con la garantía de que un elemento no se va a poder modificar.
 \begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
   \begin{center}
-    \includegraphics[width=\textwidth]{tree.png}
+  %%Corregir
+    \includegraphics[width=0.7\textwidth]{tree.png}
   \end{center}
   \caption{Jerarquía de tipos predefinidos de Python.}
 \end{wrapfigure}
@@ -414,7 +415,7 @@ Como hemos comentado a lo largo de este documento, Python incorpora mejoras al a
 \begin{itemize}
 	\item \verb+array[1:]+ : Retorna una lista con los elementos desde el 1.
 	\item \verb+array[:4]+ : Retorna una lista con los elementos hasta el 4.
-	\item \verb+array[1:3+ :Lista con los elementos desde 1 a 3 (no inclusive)
+	\item \verb+array[1:3]+ :Lista con los elementos desde 1 a 3 (no inclusive)
 	\item \verb+array[-1]+ : Último elemento
 	\item \verb+array[:]+ : Todos los elementos del array
 \end{itemize}

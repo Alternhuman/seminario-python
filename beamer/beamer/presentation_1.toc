@@ -1,0 +1,15 @@
+\select@language {spanish}
+\beamer@endinputifotherversion {3.33pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Introducci\IeC {\'o}n}{4}{0}{1}
+\beamer@subsectionintoc {1}{1}{Historia}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{Usos}{7}{0}{1}
+\beamer@subsectionintoc {1}{3}{Pros y contras}{10}{0}{1}
+\beamer@subsectionintoc {1}{4}{\IeC {\textquestiondown }Qui\IeC {\'e}n usa Python?}{12}{0}{1}
+\beamer@sectionintoc {2}{Tipos de datos}{14}{0}{2}
+\beamer@subsectionintoc {2}{1}{N\IeC {\'u}meros}{14}{0}{2}
+\beamer@subsectionintoc {2}{2}{Cadenas de texto}{15}{0}{2}
+\beamer@subsectionintoc {2}{3}{\IeC {\textquestiondown }C\IeC {\'o}mo funciona la gesti\IeC {\'o}n de la memoria?}{16}{0}{2}
+\beamer@subsectionintoc {2}{4}{Listas y diccionarios}{17}{0}{2}
+\beamer@subsectionintoc {2}{5}{Mutable y no mutable}{21}{0}{2}
+\beamer@sectionintoc {3}{Second Section}{22}{0}{3}
