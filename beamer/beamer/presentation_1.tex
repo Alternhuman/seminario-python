@@ -84,6 +84,7 @@
 \usepackage[spanish]{babel}
 \selectlanguage{spanish}
 \usepackage[utf8]{inputenc}
+\usepackage{verbatim}
 \graphicspath{{Pictures/}}
 
 %----------------------------------------------------------------------------------------
@@ -361,83 +362,53 @@ La principal ventaja de contar con ambos tipos de elementos es la flexibilidad d
 \includegraphics[height=0.7\textheight]{tree.png}
 \end{center}
 \end{frame}
-%------------------------------------------------
-\section{Second Section}
-%------------------------------------------------
+
+\section{Control del flujo}
+\begin{frame}
+\begin{itemize}
+\item if, elif, else
+\item while
+	añade operadores como else
+\end{itemize}
+\end{frame}
+
+\section{Funciones}
+\begin{frame}
+Toda función en Python genera una referencia que se almacena en un nombre. Ejemplos:
+\end{frame}
+
+\section{Módulos}
+\begin{frame}
+\frametitle{Módulos}
+Un módulo de Python es un paquete de código que permite aumentar la funcionalidad de programas mediante la reutilización de piezas de otros. A grandes rasgos constituyen paquetes de nombres que son cargados (y compilados sin es necesario) en memoria según la funcionalidad que se desee aprovechar de ellos.\\
+Fomentan la reusabilidad del código, particionan el espacio de nombres e implementan servicios compartidos o datos.\\
+Se utilizan las sentencias \textbf{import} o \textbf{from} para añadir módulos al programa.
+\end{frame}
+
+\section{Orientación a objetos}
+\begin{frame}
+Al ser un lenguaje multiparadigma, la utilización de objetos o no es una decisión delegada al programador. Sin embargo es altamente recomendable utilizar la orientación a objetos debido a los beneficios que supone.
+\end{frame}
 
 \begin{frame}
-\frametitle{Table}
-\begin{table}
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\caption{Table caption}
-\end{table}
+\frametitle{Ejemplo de una clase}
+%%Do
+\end{frame}
+
+\section{Excepciones}
+\begin{frame}
+Las excepciones son mecanismos de control de situaciones irregulares dentro del flujo de un programa. Consisten en bloques de código rodeados por las palabras \textbf{try}, \textbf{except} y \textbf{finally}. Se capturan tanto excepciones incluidas en los módulos estándar de Python como aquellas excepciones definidas por el usuario (utilizando \textbf{raise}).
 \end{frame}
 
 %------------------------------------------------
+\begin{frame}
+Demo time!
+\end{frame}
 
 \begin{frame}
-\frametitle{Theorem}
-\begin{theorem}[Mass--energy equivalence]
-$E = mc^2$
-\end{theorem}
+\frametitle{Impacto en el mundo del desarrollo de software.}
+%%XKCD here
 \end{frame}
-
-%------------------------------------------------
-
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Verbatim}
-\begin{example}[Theorem Slide Code]
-\begin{verbatim}
-\begin{frame}
-\frametitle{Theorem}
-\begin{theorem}[Mass--energy equivalence]
-$E = mc^2$
-\end{theorem}
-\end{frame}\end{verbatim}
-\end{example}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Figure}
-Uncomment the code on this slide to include your own image from the same directory as the template .TeX file.
-%\begin{figure}
-%\includegraphics[width=0.8\linewidth]{test}
-%\end{figure}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Citation}
-An example of the \verb|\cite| command to cite within the presentation:\\~
-
-This statement requires citation \cite{p1}.
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{References}
-\footnotesize{
-\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
-\bibitem[Smith, 2012]{p1} John Smith (2012)
-\newblock Title of the publication
-\newblock \emph{Journal Name} 12(3), 45 -- 678.
-\end{thebibliography}
-}
-\end{frame}
-
-%------------------------------------------------
 
 \begin{frame}
 \Huge{\centerline{The End}}

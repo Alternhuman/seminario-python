@@ -12,4 +12,9 @@
 \beamer@subsectionintoc {2}{3}{\IeC {\textquestiondown }C\IeC {\'o}mo funciona la gesti\IeC {\'o}n de la memoria?}{16}{0}{2}
 \beamer@subsectionintoc {2}{4}{Listas y diccionarios}{17}{0}{2}
 \beamer@subsectionintoc {2}{5}{Mutable y no mutable}{21}{0}{2}
-\beamer@sectionintoc {3}{Second Section}{22}{0}{3}
+\beamer@sectionintoc {3}{Control del flujo}{22}{0}{3}
+\beamer@sectionintoc {4}{Funciones}{23}{0}{4}
+\beamer@sectionintoc {5}{M\IeC {\'o}dulos}{24}{0}{5}
+\beamer@sectionintoc {6}{Orientaci\IeC {\'o}n a objetos}{25}{0}{6}
+\beamer@sectionintoc {7}{Excepciones}{27}{0}{7}
+\beamer@sectionintoc {8}{Second Section}{28}{0}{8}
